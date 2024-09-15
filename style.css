@@ -1,20 +1,68 @@
-body{
+body {
     cursor: default;
     user-select: none;
 }
-.time{
-    display: inline;
-}
-.day{
+
+.time {
     display: inline-flex;
-    justify-content: center;
-    width: 12.5vw;
+    width: 12.3vw;
+    height: 500vh;
+    flex-direction: column;
 }
-.day .head{
-    color: rgb(65, 65, 65);
-    border-radius: 15px;
+
+.timeElement {
+    display: flex;
+    height: 2%;
+    border: 1px solid;
+    border-color: gray;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-bottom: none;
     cursor: pointer;
 }
-.day .head:hover{
+
+.timeElement:hover {
     background-color: rgb(225, 239, 252);
+}
+
+.box {
+    height: 2%;
+    border: 1px solid;
+    border-color: gray;
+    width: 100%;
+    border-bottom: none;
+    border-left: none;
+}
+
+.day {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 12.3vw;
+    height: 500vh;
+}
+
+.day * {
+    cursor: pointer;
+}
+
+.day .head {
+    display: inline-flex;
+    color: rgb(65, 65, 65);
+    border-radius: 15px;
+    border: none !important;
+    width: min-content !important;
+}
+
+.day *:hover {
+    border-left: 1px solid gray;
+    width: calc(100% - 1px);
+    background-color: rgb(225, 239, 252);
+}
+
+.last {
+    border-bottom: 1px solid;
+    border-bottom-color: gray;
 }
