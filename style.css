@@ -13,8 +13,7 @@ body {
 .timeElement {
     display: flex;
     height: 2%;
-    border: 1px solid;
-    border-color: gray;
+    border: 1px solid gray;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -26,13 +25,20 @@ body {
     background-color: rgb(225, 239, 252);
 }
 
+.time h1 {
+    font-size: calc((2vh + 2.5vw) / 2);
+}
+
 .box {
+    display: flex;
     height: 2%;
-    border: 1px solid;
-    border-color: gray;
+    border: 1px solid gray;
     width: 100%;
     border-bottom: none;
     border-left: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .day {
@@ -40,12 +46,16 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 12.3vw;
+    width: 12vw;
     height: 500vh;
 }
 
 .day * {
     cursor: pointer;
+}
+
+.day h1 {
+    font-size: calc((2vh + 2.5vw) / 2);
 }
 
 .day .head {
@@ -58,11 +68,55 @@ body {
 
 .day *:hover {
     border-left: 1px solid gray;
-    width: calc(100% - 1px);
+    width: calc(12.3vw - 1px);
     background-color: rgb(225, 239, 252);
 }
 
 .last {
-    border-bottom: 1px solid;
-    border-bottom-color: gray;
+    border-bottom: 1px solid gray;
+}
+
+.left {
+    border-left: 1px solid gray;
+}
+
+.selection {
+    position: absolute;
+    display: flex;
+    width: min-content;
+    height: fit-content;
+    background-color: black;
+    color: aliceblue;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.selection:hover {
+    background-color: rgb(68, 68, 68);
+    border-left: none;
+    cursor: default;
+    width: min-content;
+}
+
+.button {
+    display: block;
+    width: min-content;
+}
+
+.button:hover {
+    background-color: rgb(68, 68, 68);
+    align-self: center;
+    width: min-content;
+    border-left: none;
+}
+
+.text:hover {
+    cursor: text;
+    width: min-content;
+}
+
+.color:hover {
+    cursor: text;
+    width: min-content;
 }
