@@ -5,7 +5,7 @@ body {
 
 .time {
     display: inline-flex;
-    width: 12.3vw;
+    width: 12vw;
     height: 500vh;
     flex-direction: column;
 }
@@ -26,7 +26,7 @@ body {
 }
 
 .time h1 {
-    font-size: calc((2vh + 2.5vw) / 2);
+    font-size: calc((1vh + 2.5vw) / 2);
 }
 
 .box {
@@ -46,7 +46,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 12vw;
+    width: 11.5vw;
     height: 500vh;
 }
 
@@ -55,7 +55,7 @@ body {
 }
 
 .day h1 {
-    font-size: calc((2vh + 2.5vw) / 2);
+    font-size: calc((1vh + 2.5vw) / 2);
 }
 
 .day .head {
@@ -68,7 +68,7 @@ body {
 
 .day *:hover {
     border-left: 1px solid gray;
-    width: calc(12.3vw - 1px);
+    width: calc(11.5vw - 1px);
     background-color: rgb(225, 239, 252);
 }
 

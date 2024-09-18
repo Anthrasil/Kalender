@@ -145,12 +145,12 @@ function createWeekEvents(/**@type {HTMLElement} */weekMonitor, /**@type {Array}
                             return
                         }
                         if (foundIndex !== -1) {
-                            appointments[foundIndex] = {
-                                x: Event.x,
-                                y: Event.y,
-                                color: Event.color,
-                                text: Event.text,
-                            };
+                            if (Event.color) {
+                                appointments[foundIndex].color = Event.color
+                            }
+                            if (Event.text != "") {
+                                appointments[foundIndex].text = Event.text
+                            }
                         } else {
                             appointments.push({
                                 x: Event.x,
