@@ -166,12 +166,12 @@ function createWeekEvents(/**@type {HTMLElement} */weekMonitor, /**@type {Array}
                         moveOn()
                     }, { once: true })
                     function handleClick(event) {
-                        if (event.code === "Enter") {
-                            document.removeEventListener("keypress", handleClick)
+                        /*not working*/return
+                        if (event.code == "Enter") {
                             moveOn()
                         }
                     }
-                    document.addEventListener("keypress", handleClick)
+                    document.addEventListener("keypress", (event) => { handleClick(event) })
                     if (!removeButton) {
                         return
                     }
